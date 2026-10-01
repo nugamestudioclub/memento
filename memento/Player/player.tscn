@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://sqsa2lquu5jm"]
+
+[ext_resource type="Texture2D" uid="uid://bv8a7qxja73d2" path="res://icon.svg" id="1_l8h54"]
+
+[sub_resource type="GDScript" id="GDScript_hwy5s"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+
+
+func _physics_process(_delta: float) -> void:
+	# Get the input direction and handle the movement/deceleration.
+	var x_direction := Input.get_axis(\"Left\", \"Right\")
+	var y_direction := Input.get_axis(\"Up\", \"Down\")
+	if x_direction or y_direction:
+		velocity.x = x_direction * SPEED
+		velocity.y = y_direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+
+	move_and_slide()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ahet1"]
+radius = 61.13101
+
+[node name="Player" type="CharacterBody2D" unique_id=2118467575]
+collision_mask = 6
+motion_mode = 1
+script = SubResource("GDScript_hwy5s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=450533282]
+texture = ExtResource("1_l8h54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889604920]
+shape = SubResource("CircleShape2D_ahet1")
