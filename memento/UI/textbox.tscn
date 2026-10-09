@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bigi8jnh410o5"]
 
+[ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/PressStart2P-Regular.ttf" id="1_oav4j"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jafju"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
@@ -40,12 +42,12 @@ layout_mode = 2
 
 [node name="Start" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=1536668898]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_oav4j")
+theme_override_font_sizes/font_size = 20
 text = "*"
 
 [node name="Label2" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=1233560884]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_oav4j")
+theme_override_font_sizes/font_size = 30
 text = "Text"
-
-[node name="End" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=861163192]
-layout_mode = 2
-text = "v"
