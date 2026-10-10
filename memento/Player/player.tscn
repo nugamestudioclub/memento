@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://sqsa2lquu5jm"]
 
 [ext_resource type="Texture2D" uid="uid://bv8a7qxja73d2" path="res://icon.svg" id="1_l8h54"]
+[ext_resource type="PackedScene" uid="uid://bigi8jnh410o5" path="res://UI/textbox.tscn" id="2_4ntmi"]
 
 [sub_resource type="GDScript" id="GDScript_hwy5s"]
 script/source = "extends CharacterBody2D
@@ -36,3 +37,5 @@ texture = ExtResource("1_l8h54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889604920]
 shape = SubResource("CircleShape2D_ahet1")
+
+[node name="Textbox" parent="." unique_id=65272216 instance=ExtResource("2_4ntmi")]

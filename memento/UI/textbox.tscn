@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bigi8jnh410o5"]
 
+[ext_resource type="Script" uid="uid://bd3tmo224ubn7" path="res://Scripts/textbox.gd" id="1_m6e41"]
 [ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/PressStart2P-Regular.ttf" id="1_oav4j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jafju"]
@@ -10,6 +11,7 @@ border_width_right = 3
 border_width_bottom = 3
 
 [node name="Textbox" type="CanvasLayer" unique_id=65272216]
+script = ExtResource("1_m6e41")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=204890145]
 anchors_preset = 12

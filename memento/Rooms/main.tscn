@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://b1ngoxhydu338"]
 
 [ext_resource type="PackedScene" uid="uid://sqsa2lquu5jm" path="res://Player/player.tscn" id="1_t5xo0"]
+[ext_resource type="PackedScene" uid="uid://bigi8jnh410o5" path="res://UI/textbox.tscn" id="2_f2r3m"]
 
 [node name="Node2D" type="Node2D" unique_id=1840739183]
 
 [node name="Player" parent="." unique_id=2118467575 instance=ExtResource("1_t5xo0")]
 position = Vector2(253, 277)
+
+[node name="Textbox" parent="." unique_id=65272216 instance=ExtResource("2_f2r3m")]
