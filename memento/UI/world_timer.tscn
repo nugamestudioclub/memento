@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://boo4nm7de54hf"]
+
+[ext_resource type="Script" uid="uid://ce85tvkjv374f" path="res://Scripts/Globals.gd" id="1_pd5ru"]
+
+[node name="Globals" type="Node" unique_id=1544191940]
+script = ExtResource("1_pd5ru")
+
+[node name="WorldTimer" type="Timer" parent="." unique_id=939641304]
+wait_time = 30.0
+
+[connection signal="timeout" from="WorldTimer" to="." method="_on_world_timer_timeout"]
