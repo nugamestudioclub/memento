@@ -10,12 +10,14 @@ const SPEED = 300.0
 
 
 func _physics_process(_delta: float) -> void:
-	# Get the input direction and handle the movement/deceleration.
 	var x_direction := Input.get_axis(\"Left\", \"Right\")
 	var y_direction := Input.get_axis(\"Up\", \"Down\")
-	if x_direction or y_direction:
-		velocity.x = x_direction * SPEED
-		velocity.y = y_direction * SPEED
+
+	var direction := Vector2(x_direction, y_direction)
+
+	if direction.length() > 0:
+		velocity = direction.normalized() * SPEED
+		rotation = direction.angle()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
@@ -32,6 +34,7 @@ motion_mode = 1
 script = SubResource("GDScript_hwy5s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=450533282]
+rotation = 4.712389
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_l8h54")
 

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b4flx40hhrkpa"]
+
+[ext_resource type="Script" uid="uid://cf7b6ibeb7xfx" path="res://Scripts/timer.gd" id="1_342dd"]
+[ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/PressStart2P-Regular.ttf" id="2_jpgby"]
+
+[node name="Timer" type="CanvasLayer" unique_id=341913322]
+script = ExtResource("1_342dd")
+
+[node name="Timer" type="Timer" parent="." unique_id=971514545]
+wait_time = 30.0
+one_shot = true
+
+[node name="Label" type="Label" parent="." unique_id=1634378244]
+offset_top = 20.0
+offset_right = 1152.0
+offset_bottom = 50.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_jpgby")
+theme_override_font_sizes/font_size = 30
+text = "---"
+horizontal_alignment = 1
