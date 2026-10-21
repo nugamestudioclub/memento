@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bd3tmo224ubn7" path="res://Scripts/textbox.gd" id="1_m6e41"]
 [ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/PressStart2P-Regular.ttf" id="1_oav4j"]
 [ext_resource type="Texture2D" uid="uid://sq1wsgyw52fs" path="res://UI/downarrow.png" id="2_qdi28"]
-[ext_resource type="Texture2D" uid="uid://bffr3djlogv6j" path="res://Player/moriportrait-removebg-preview (2).png" id="4_fdaix"]
+[ext_resource type="Texture2D" uid="uid://bffr3djlogv6j" path="res://UI/moriportrait-removebg-preview (2).png" id="4_fdaix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jafju"]
 bg_color = Color(0, 0, 0, 1)
@@ -55,19 +55,19 @@ texture = ExtResource("2_qdi28")
 layout_mode = 2
 size_flags_vertical = 0
 offset_transform_enabled = true
-offset_transform_position = Vector2(10, 13)
+offset_transform_position = Vector2(-10, 13)
 theme_override_fonts/font = ExtResource("1_oav4j")
 theme_override_font_sizes/font_size = 25
 text = "*"
 
 [node name="Text" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=1233560884]
-custom_minimum_size = Vector2(870, 0)
-custom_maximum_size = Vector2(870, -1)
+custom_minimum_size = Vector2(850, 0)
+custom_maximum_size = Vector2(850, -1)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 offset_transform_enabled = true
-offset_transform_position = Vector2(10, 12)
+offset_transform_position = Vector2(-10, 12)
 theme_override_fonts/font = ExtResource("1_oav4j")
 theme_override_font_sizes/font_size = 30
 text = "Text"

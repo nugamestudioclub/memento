@@ -18,11 +18,6 @@ func _ready():
 	dialogue_end.visible = true
 	dialogue_end.modulate.a = 0
 
-	dialogue_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	dialogue_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	dialogue_label.autowrap_mode = TextServer.AUTOWRAP_WORD
-
-
 func display_dialogue(text_to_show: String):
 	show()
 
