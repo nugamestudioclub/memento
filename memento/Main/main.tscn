@@ -3,8 +3,26 @@
 [ext_resource type="PackedScene" uid="uid://sqsa2lquu5jm" path="res://Player/player.tscn" id="1_qvhan"]
 [ext_resource type="PackedScene" uid="uid://bigi8jnh410o5" path="res://UI/textbox.tscn" id="2_eunhr"]
 [ext_resource type="PackedScene" uid="uid://b4flx40hhrkpa" path="res://UI/timer.tscn" id="3_k3v36"]
+[ext_resource type="Texture2D" uid="uid://by347j72fvw3q" path="res://Main/room.png" id="4_eunhr"]
 
 [node name="Node2D" type="Node2D" unique_id=1840739183]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1279116027]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.06927
+offset_top = -324.0
+offset_right = 435.06927
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_eunhr")
+stretch_mode = 5
 
 [node name="Player" parent="." unique_id=2118467575 instance=ExtResource("1_qvhan")]
 position = Vector2(253, 277)
