@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sq1wsgyw52fs"
-path="res://.godot/imported/downarrow.png-726e3d328c3fe6020765b73b3491d704.ctex"
+uid="uid://bkl5gsl6v2vjj"
+path="res://.godot/imported/placeholder.png-37910f10f5794d7616f2056bc8dc5f19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/downarrow.png"
-dest_files=["res://.godot/imported/downarrow.png-726e3d328c3fe6020765b73b3491d704.ctex"]
+source_file="res://Objects/placeholder.png"
+dest_files=["res://.godot/imported/placeholder.png-37910f10f5794d7616f2056bc8dc5f19.ctex"]
 
 [params]
 

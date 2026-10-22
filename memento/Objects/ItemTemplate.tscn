@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://di1wlce2cufqk"]
+
+[ext_resource type="Texture2D" uid="uid://bkl5gsl6v2vjj" path="res://Objects/placeholder.png" id="1_8vmoh"]
+[ext_resource type="Script" uid="uid://clgj5k431pkl5" path="res://Objects/item_template.gd" id="1_8828s"]
+[ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/Fonts/PressStart2P-Regular.ttf" id="3_brmm6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brmm6"]
+
+[node name="ItemTemplate" type="Area2D" unique_id=681686188]
+script = ExtResource("1_8828s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=388706463]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_8vmoh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1387881533]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_brmm6")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=177073661]
+visible = false
+offset_right = 210.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("3_brmm6")
+theme_override_font_sizes/font_size = 30
+text = "PRESS E
+"

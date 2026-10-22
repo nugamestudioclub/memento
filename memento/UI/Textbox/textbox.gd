@@ -9,9 +9,6 @@ var dialogue_done = false
 var tween: Tween
 var marker_tween: Tween
 
-var dialogue_text = "Hello! This is your first dialogue."
-
-
 func _ready():
 	hide()
 
@@ -46,23 +43,22 @@ func display_dialogue(text_to_show: String):
 
 func _input(event):
 	if event is InputEventKey and event.pressed and not event.echo:
-
-		if event.keycode == KEY_SPACE:
-			if not visible:
-				display_dialogue(dialogue_text)
-			return
-
 		if event.keycode == KEY_X:
 			if not visible:
+				return  
+
+			get_viewport().set_input_as_handled()
+
+			if dialogue_done:
+				close_dialogue()
 				return
 
-			if not dialogue_done:
-				if tween and tween.is_running():
-					tween.kill()
+			if tween and tween.is_running():
+				tween.kill()
 
-				dialogue_label.visible_characters = -1
-				dialogue_done = true
-				animate_end_marker()
+			dialogue_label.visible_characters = -1
+			dialogue_done = true
+			animate_end_marker()
 
 
 func _on_dialogue_finished():

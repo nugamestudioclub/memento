@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bffr3djlogv6j"
-path="res://.godot/imported/moriportrait-removebg-preview (2).png-c25c54d7f6efe504ba26463c9d665f2c.ctex"
+path="res://.godot/imported/moriportrait-removebg-preview (2).png-f8a45edc36023b5c1ef69fbb545c7211.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/moriportrait-removebg-preview (2).png"
-dest_files=["res://.godot/imported/moriportrait-removebg-preview (2).png-c25c54d7f6efe504ba26463c9d665f2c.ctex"]
+source_file="res://UI/Textbox/moriportrait-removebg-preview (2).png"
+dest_files=["res://.godot/imported/moriportrait-removebg-preview (2).png-f8a45edc36023b5c1ef69fbb545c7211.ctex"]
 
 [params]
 

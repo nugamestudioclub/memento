@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bigi8jnh410o5"]
 
-[ext_resource type="Script" uid="uid://bd3tmo224ubn7" path="res://Scripts/textbox.gd" id="1_m6e41"]
-[ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/PressStart2P-Regular.ttf" id="1_oav4j"]
-[ext_resource type="Texture2D" uid="uid://sq1wsgyw52fs" path="res://UI/downarrow.png" id="2_qdi28"]
-[ext_resource type="Texture2D" uid="uid://bffr3djlogv6j" path="res://UI/moriportrait-removebg-preview (2).png" id="4_fdaix"]
+[ext_resource type="Script" uid="uid://bd3tmo224ubn7" path="res://UI/Textbox/textbox.gd" id="1_m6e41"]
+[ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/Fonts/PressStart2P-Regular.ttf" id="1_oav4j"]
+[ext_resource type="Texture2D" uid="uid://sq1wsgyw52fs" path="res://UI/Textbox/downarrow.png" id="2_qdi28"]
+[ext_resource type="Texture2D" uid="uid://bffr3djlogv6j" path="res://UI/Textbox/moriportrait-removebg-preview (2).png" id="4_fdaix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jafju"]
 bg_color = Color(0, 0, 0, 1)

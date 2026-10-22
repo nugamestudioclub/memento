@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://sqsa2lquu5jm"]
 
 [ext_resource type="Texture2D" uid="uid://bgcbwq54q312d" path="res://Player/topdownmori1.png" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://c5b4bjvc4ko06" path="res://Player/topdownmori2.png" id="2_4ntmi"]
 
 [sub_resource type="GDScript" id="GDScript_hwy5s"]
 script/source = "extends CharacterBody2D
@@ -8,8 +9,15 @@ script/source = "extends CharacterBody2D
 
 const SPEED = 300.0
 
+@onready var sprite: AnimatedSprite2D = $Sprite2D
+
 
 func _physics_process(_delta: float) -> void:
+	var box = get_tree().get_first_node_in_group(\"dialogue\")
+	if box and box.visible:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
 	var x_direction := Input.get_axis(\"Left\", \"Right\")
 	var y_direction := Input.get_axis(\"Up\", \"Down\")
 
@@ -18,25 +26,44 @@ func _physics_process(_delta: float) -> void:
 	if direction.length() > 0:
 		velocity = direction.normalized() * SPEED
 		rotation = direction.angle()
+		sprite.play(\"default\")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+		sprite.stop()
+		sprite.frame = 0 
 
 	move_and_slide()
 "
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_jafju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l8h54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4ntmi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahet1"]
 radius = 61.13101
 
-[node name="Player" type="CharacterBody2D" unique_id=2118467575]
+[node name="Player" type="CharacterBody2D" unique_id=2118467575 groups=["Player"]]
+scale = Vector2(0.8, 0.8)
 collision_mask = 6
 motion_mode = 1
 script = SubResource("GDScript_hwy5s")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=450533282]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1692558192]
 rotation = 4.712389
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("1_l8h54")
+sprite_frames = SubResource("SpriteFrames_jafju")
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889604920]
 shape = SubResource("CircleShape2D_ahet1")
