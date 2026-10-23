@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://djuay47o1rc40"]
 
 [ext_resource type="Texture2D" uid="uid://by347j72fvw3q" path="res://Main/room.png" id="1_ifnsg"]
+[ext_resource type="Texture2D" uid="uid://dksabpi073if1" path="res://Main/b07.jpg" id="2_x1rqk"]
 
 [node name="TextureRect" type="TextureRect" unique_id=1936080843]
 anchors_preset = 8
@@ -8,13 +9,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -435.06927
-offset_top = -324.0
-offset_right = 435.06927
-offset_bottom = 324.0
+offset_left = -672.0
+offset_top = -511.0
+offset_right = 198.13867
+offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.7, 1.7)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_ifnsg")
 stretch_mode = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1741347314]
+z_index = -1
+position = Vector2(524.7059, 152.35294)
+texture = ExtResource("2_x1rqk")

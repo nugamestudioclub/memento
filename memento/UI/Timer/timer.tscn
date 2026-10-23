@@ -11,9 +11,13 @@ wait_time = 30.0
 one_shot = true
 
 [node name="Label" type="Label" parent="." unique_id=1634378244]
-offset_top = 20.0
-offset_right = 1152.0
-offset_bottom = 50.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 30.0
+grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_jpgby")
 theme_override_font_sizes/font_size = 30

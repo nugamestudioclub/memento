@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b2qeiay6ggklr"]
+
+[ext_resource type="Script" path="res://Scripts/textbox.gd" id="1_m6e41"]
+[ext_resource type="FontFile" path="res://UI/PressStart2P-Regular.ttf" id="1_oav4j"]
+[ext_resource type="Texture2D" path="res://UI/downarrow.png" id="2_qdi28"]
+[ext_resource type="Texture2D" path="res://UI/moriportrait-removebg-preview (2).png" id="4_fdaix"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jafju"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="Textbox" type="CanvasLayer" unique_id=65272216]
+script = ExtResource("1_m6e41")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=204890145]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1561569310]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jafju")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=573492355]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="MarginContainer/MarginContainer" unique_id=210187138]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer" unique_id=405928547]
+custom_minimum_size = Vector2(-1, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="End" type="Sprite2D" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=684950468]
+position = Vector2(850, 98)
+scale = Vector2(0.08200006, 0.08066672)
+texture = ExtResource("2_qdi28")
+
+[node name="Start" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=1536668898]
+layout_mode = 2
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(-10, 13)
+theme_override_fonts/font = ExtResource("1_oav4j")
+theme_override_font_sizes/font_size = 25
+text = "*"
+
+[node name="Text" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=1233560884]
+custom_minimum_size = Vector2(850, 0)
+custom_maximum_size = Vector2(850, -1)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(-10, 12)
+theme_override_fonts/font = ExtResource("1_oav4j")
+theme_override_font_sizes/font_size = 30
+text = "Text"
+autowrap_mode = 2
+autowrap_trim_flags = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/MarginContainer" unique_id=2078180171]
+position = Vector2(82, 77)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_fdaix")

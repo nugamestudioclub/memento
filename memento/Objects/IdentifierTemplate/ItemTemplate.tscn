@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://di1wlce2cufqk"]
 
-[ext_resource type="Texture2D" uid="uid://bkl5gsl6v2vjj" path="res://Objects/placeholder.png" id="1_8vmoh"]
-[ext_resource type="Script" uid="uid://clgj5k431pkl5" path="res://Objects/item_template.gd" id="1_8828s"]
+[ext_resource type="Texture2D" uid="uid://bkl5gsl6v2vjj" path="res://Objects/IdentifierTemplate/placeholder.png" id="1_8vmoh"]
+[ext_resource type="Script" uid="uid://clgj5k431pkl5" path="res://Objects/IdentifierTemplate/item_template.gd" id="1_8828s"]
 [ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/Fonts/PressStart2P-Regular.ttf" id="3_brmm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brmm6"]
@@ -19,9 +19,20 @@ shape = SubResource("RectangleShape2D_brmm6")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=177073661]
 visible = false
-offset_right = 210.0
-offset_bottom = 87.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -43.5
+offset_right = 105.0
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_brmm6")
 theme_override_font_sizes/font_size = 30
 text = "PRESS E
 "
+horizontal_alignment = 1
