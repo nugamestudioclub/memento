@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://5gbyjaxbkw85"]
 
-[ext_resource type="Script" uid="uid://clgj5k431pkl5" path="res://Objects/IdentifierTemplate/item_template.gd" id="1_b4vee"]
-[ext_resource type="Texture2D" uid="uid://dpgv4ut5vp0v0" path="res://Objects/PickUpTemplate/4529db5661b887626ac08d47dff3350f.jpg" id="2_lvkbb"]
-[ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/Fonts/PressStart2P-Regular.ttf" id="3_xkchj"]
+[ext_resource type="Script" uid="uid://pdyib7frpx8u" path="res://Objects/PickUpTemplate/pick_up_template.gd" id="1_lvkbb"]
+[ext_resource type="Texture2D" uid="uid://61f0s8kw8h8m" path="res://Objects/PickUpTemplate/pickup.png" id="2_lvkbb"]
+[ext_resource type="FontFile" uid="uid://c85w5n7v0f61v" path="res://UI/Fonts/DragnelRegular-q2wGl.ttf" id="3_lvkbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brmm6"]
 
-[node name="ItemTemplate" type="Area2D" unique_id=681686188]
-script = ExtResource("1_b4vee")
+[node name="PickUpTemplate" type="Area2D" unique_id=681686188]
+script = ExtResource("1_lvkbb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=388706463]
 scale = Vector2(0.1, 0.1)
@@ -25,13 +25,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -105.0
-offset_top = -43.5
+offset_top = -60.0
 offset_right = 105.0
-offset_bottom = 43.5
+offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_xkchj")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lvkbb")
 theme_override_font_sizes/font_size = 30
 text = "PRESS E
 "

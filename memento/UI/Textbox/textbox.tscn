@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bji16pv3s1w0o" path="res://UI/Fonts/PressStart2P-Regular.ttf" id="1_oav4j"]
 [ext_resource type="Texture2D" uid="uid://sq1wsgyw52fs" path="res://UI/Textbox/downarrow.png" id="2_qdi28"]
 [ext_resource type="Texture2D" uid="uid://bffr3djlogv6j" path="res://UI/Textbox/moriportrait-removebg-preview (2).png" id="4_fdaix"]
+[ext_resource type="FontFile" uid="uid://c85w5n7v0f61v" path="res://UI/Fonts/DragnelRegular-q2wGl.ttf" id="4_k83a0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jafju"]
 bg_color = Color(0, 0, 0, 1)
@@ -11,6 +12,8 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k83a0"]
 
 [node name="Textbox" type="CanvasLayer" unique_id=65272216]
 script = ExtResource("1_m6e41")
@@ -45,11 +48,14 @@ theme_override_constants/margin_bottom = 16
 
 [node name="Panel" type="Panel" parent="MarginContainer/MarginContainer" unique_id=210187138]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_k83a0")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer" unique_id=405928547]
 custom_minimum_size = Vector2(-1, 0)
 layout_mode = 2
 size_flags_horizontal = 8
+offset_transform_enabled = true
+offset_transform_position = Vector2(-40, 0)
 
 [node name="End" type="Sprite2D" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=684950468]
 position = Vector2(850, 98)
@@ -72,14 +78,14 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 offset_transform_enabled = true
-offset_transform_position = Vector2(-10, 12)
-theme_override_fonts/font = ExtResource("1_oav4j")
-theme_override_font_sizes/font_size = 30
+offset_transform_position = Vector2(-10, 6)
+theme_override_fonts/font = ExtResource("4_k83a0")
+theme_override_font_sizes/font_size = 50
 text = "Text"
 autowrap_mode = 2
 autowrap_trim_flags = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/MarginContainer" unique_id=2078180171]
+[node name="Portrait" type="Sprite2D" parent="MarginContainer/MarginContainer" unique_id=2078180171]
 position = Vector2(82, 77)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_fdaix")

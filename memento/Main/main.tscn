@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://by347j72fvw3q" path="res://Main/room.png" id="4_eunhr"]
 [ext_resource type="PackedScene" uid="uid://di1wlce2cufqk" path="res://Objects/IdentifierTemplate/ItemTemplate.tscn" id="5_k3v36"]
 [ext_resource type="Texture2D" uid="uid://dksabpi073if1" path="res://Main/b07.jpg" id="6_liyct"]
+[ext_resource type="PackedScene" uid="uid://5gbyjaxbkw85" path="res://Objects/PickUpTemplate/PickUpTemplate.tscn" id="7_ib3t1"]
 
 [node name="Node2D" type="Node2D" unique_id=1840739183]
 
@@ -29,11 +30,16 @@ scale = Vector2(1.68, 1.68)
 interact_text = "!"
 message = "miku dayo"
 
-[node name="Player" parent="." unique_id=2118467575 instance=ExtResource("1_qvhan")]
-position = Vector2(427, 265)
-scale = Vector2(1.344, 1.344)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=982027254]
 z_index = -1
 position = Vector2(953, 506)
 texture = ExtResource("6_liyct")
+
+[node name="PickUpTemplate" parent="." unique_id=1155821000 instance=ExtResource("7_ib3t1")]
+position = Vector2(933, 223)
+scale = Vector2(1.6, 1.6)
+interact_text = "!"
+
+[node name="Player" parent="." unique_id=2118467575 instance=ExtResource("1_qvhan")]
+position = Vector2(427.00003, 265)
+scale = Vector2(1.3439999, 1.3439999)
